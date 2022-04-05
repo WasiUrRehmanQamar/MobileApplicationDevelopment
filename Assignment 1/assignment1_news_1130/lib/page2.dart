@@ -2,6 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 void main() {
   runApp(const NewsUI1());
@@ -44,23 +45,23 @@ class _NewsUI1State extends State<NewsUI1> {
                         style: TextStyle(color: Colors.white),
                       ),
                       trailing: FlatButton(
-                        color: Color(0xff23252f),
-                        onPressed: () {},
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Following",
-                              style: TextStyle(color: Color(0xFFff736d)),
-                            )
-                          ],
-                        ),
+                        minWidth: 100,
+                        splashColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             side: BorderSide(
                                 color: Color(0xFFff736d),
                                 width: 1,
                                 style: BorderStyle.solid),
                             borderRadius: BorderRadius.circular(50)),
+                        color: Color(0xFFff736d),
+                        onPressed: () {},
+                        child: const Text(
+                          " + Follow ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                       subtitle: Text(
                         "6.5M Followers",
@@ -81,23 +82,23 @@ class _NewsUI1State extends State<NewsUI1> {
                         style: TextStyle(color: Colors.white),
                       ),
                       trailing: FlatButton(
-                        color: Color(0xFFff736d),
-                        onPressed: () {},
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Follow",
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
+                        minWidth: 100,
+                        splashColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             side: BorderSide(
                                 color: Color(0xFFff736d),
                                 width: 1,
                                 style: BorderStyle.solid),
                             borderRadius: BorderRadius.circular(50)),
+                        color: Color(0xFFff736d),
+                        onPressed: () {},
+                        child: const Text(
+                          " + Follow ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                       subtitle: Text(
                         "143K Followers",
@@ -118,23 +119,23 @@ class _NewsUI1State extends State<NewsUI1> {
                         style: TextStyle(color: Colors.white),
                       ),
                       trailing: FlatButton(
-                        color: Color(0xff23252f),
-                        onPressed: () {},
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Following",
-                              style: TextStyle(color: Color(0xFFff736d)),
-                            )
-                          ],
-                        ),
+                        minWidth: 100,
+                        splashColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             side: BorderSide(
                                 color: Color(0xFFff736d),
                                 width: 1,
                                 style: BorderStyle.solid),
                             borderRadius: BorderRadius.circular(50)),
+                        color: Colors.transparent,
+                        onPressed: () {},
+                        child: const Text(
+                          " Following ",
+                          style: TextStyle(
+                              color: Color(0xFFff736d),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14),
+                        ),
                       ),
                       subtitle: Text(
                         "616.3K Followers",
@@ -144,7 +145,27 @@ class _NewsUI1State extends State<NewsUI1> {
                         child: Image.asset('assets/images/cnn.png'),
                       ),
                     )),
-              )
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                  style: (ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                          EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                      backgroundColor:
+                          MaterialStateProperty.all(Color(0xFFff736d)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )))),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const NewsUI()),
+                    );
+                  },
+                  child: Text('Go To First Page')),
             ],
           ),
         ),
