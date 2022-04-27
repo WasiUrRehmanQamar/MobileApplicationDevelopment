@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "mad-assignment-q3-wasi1130",
+    "mad-assignment-q3-wasi1130": "mad-assignment-q3-wasi1130"
+  },
+  "targets": {}
+}
